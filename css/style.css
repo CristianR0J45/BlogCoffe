@@ -56,8 +56,19 @@ img{
 /* Grid */
 @media (min-width: 768px) {
     .grid{
+        
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas{
+        justify-content: center;
+    }
+    .columnas-12{
+        flex: 0 0 calc(100% - 1rem);
+    }
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem);
     }
     .columnas-8{
         flex: 0 0 calc(66.6% - 1rem);
@@ -87,11 +98,17 @@ img{
     font-size: 2rem;
     margin: 2rem 0;
     text-align: center;
+    flex: 0 0 100%;
+   
+}
+.btn:hover{
+    cursor: pointer;
 }
 @media (min-width: 768px) {
     .btn{
         display: inline-block;
-
+        flex: 0 0 auto;
+        
     }
 }
 .btn-primario{
@@ -146,6 +163,11 @@ img{
     color: white;
 
 }
+.navegacion a:hover{
+    color:chartreuse;
+    font-weight: bold
+}
+
 @media (min-width: 768px) {
     .navegacion a{
         display: inline;
@@ -271,4 +293,40 @@ li h4{
     color: white;
     text-decoration: none;
     
+}
+
+
+/* contacto */
+.formulario-contacto{
+    color: black;
+
+}
+@media (min-width: 768px) {
+    .formulario-contacto{
+        margin-top: -10rem;
+        background-color: white;
+        padding: 5rem;
+    }
+}
+.formulario-contacto .campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+}
+.formulario-contacto .campo label{
+    flex: 0 0 8rem;
+}
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea{
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+    flex:1;
+}
+.formulario-contacto textarea{
+    height: 10rem;
+}
+.formulario-contacto .enviar{
+    display: flex;
+    justify-content: end;
 }
