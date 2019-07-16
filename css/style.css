@@ -24,15 +24,20 @@ h1,h2,h3,h4,h5{
 }
 h1{
     font-size: 4.8rem;
+    
 }
 h2{
     font-size: 4rem;
+    line-height: 4rem;
+
 }
 h3{
     font-size: 3.2rem;
+    line-height: 4rem;
 }
 h4{
     font-size: 2.8rem;
+    line-height: 3rem;
 }
 img{
     max-width: 100%;
@@ -46,6 +51,55 @@ img{
 }
 .no-margin{
     margin: 0 !important;
+}
+
+/* Grid */
+@media (min-width: 768px) {
+    .grid{
+        display: flex;
+        justify-content: space-between;
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    
+}
+
+
+/* Botones */
+.btn{
+    border: none;
+    display: block;
+    padding: 1rem 3rem;
+    color: white;
+    text-decoration: none;
+    margin-top: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .btn{
+        display: inline-block;
+
+    }
+}
+.btn-primario{
+    color: white;
+    background-color: black;
+}
+.btn-secundario{
+    background-color: #784d3c;
 }
 
 
@@ -88,6 +142,8 @@ img{
     text-align: center;
     display: block;
     font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
 
 }
 @media (min-width: 768px) {
@@ -132,15 +188,87 @@ img{
     /* cambia el orden en html y sube una posicion de lugar */
     order: -1;
 }
+.cursos h2{
+    line-height: 4rem;
+}
+
+li h4{
+    line-height: 3rem;
+}
+.entrada-blog{
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #e1e1e1;
+    padding: 2rem 0 2rem 0;
+}
+.entrada-blog:last-of-type{
+    border-bottom: none;
+    
+}
 @media (min-width: 768px) {
     .contenido-principal{
         justify-content: space-between;
     }
     .blog{
-        flex-basis: 66.6%;
+        flex-basis: 60%;
     }
     .cursos{
-        flex-basis: calc(33.3% - 4rem);
+        flex-basis: calc(40% - 4rem);
         order: 2;
     }
+    .cursos h2{
+        line-height: 4rem;
+    }
+    li h4{
+        line-height: 3rem;
+    }
+    
+}
+
+
+/* Cursos Lista */
+
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+}
+.curso{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1.5px solid #e1e1e1;
+}
+.curso:last-of-type{
+    border: none;
+}
+.curso p{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.curso p span, .curso p.descripcion{
+    font-weight: 400;
+}
+
+
+
+/* Footer */
+.site-footer{
+    background-color: black;
+    padding: 4rem 3rem;
+    text-align: center;
+    align-items: center;
+
+}
+.site-footer p{
+    color: white;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans',sans-serif;
+}
+.barra.contenedor span{
+    font-weight: bold;
+}
+.barra a{
+    color: white;
+    text-decoration: none;
+    
 }
